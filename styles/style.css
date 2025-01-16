@@ -29,6 +29,10 @@ body{
     color: var(--cor-secundaria);
 }
 
+img {
+    border: 2px outset #9A208C;
+  }
+
 .cabecalho{
     padding: 2% 0% 0% 15%;
 }
