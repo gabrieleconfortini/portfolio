@@ -5,6 +5,7 @@
     --cor-secundaria:#E9E8E8;
     --cor-terciaria:#913175;
     --cor-hover:#9A208C;
+    --cor-link-hover: #BC8F8F;
 
     --fonte-primaria:'Krona One', sans-serif;
     --fonte-secundaria:'Montserrat', sans-serif;
@@ -13,6 +14,13 @@
 *{
     margin: 0;
     padding: 0;
+}
+
+.container {  
+    display: grid;  
+    grid-gap: 5px;  
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: repeat(2, 100px);  
 }
 
 body{
@@ -36,6 +44,11 @@ body{
     font-weight: 600;
     color: var(--cor-terciaria);
     text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.cabecalho__menu__link:hover {
+    color: var(--cor-link-hover);
 }
 
 .apresentacao{
@@ -72,6 +85,10 @@ body{
     color: var(--cor-terciaria);
 }
 
+.apresentacao__conteudo__texto a:hover {
+    color: var(--cor-link-hover); /* Houver mais contrastante */
+}
+
 .apresentacao__links{
     display: flex;
     flex-direction: column;
@@ -100,7 +117,12 @@ body{
     text-decoration: none;
     color: var(--cor-secundaria);
     font-family: var(--fonte-secundaria);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
 
+.apresentacao__links__navegacao:hover {
+    background-color: var(--cor-hover);
+    color: #fff; /* Melhor contraste ao passar o mouse */
 }
 
 .apresentacao__links__link:hover{
